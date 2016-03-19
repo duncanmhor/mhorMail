@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Web", "MhorMail.Web\MhorMail.Web.csproj", "{19C3D161-130D-4ADE-9D3C-AA19A3545E19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Services.Abstract", "MhorMail.Services.Abstract\MhorMail.Services.Abstract.csproj", "{A55139A6-B1EE-4085-A163-F310241D701F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Services", "MhorMail.Services\MhorMail.Services.csproj", "{A7101E40-CD6A-4EE7-820E-7971D7B245F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Model", "MhorMail.Model\MhorMail.Model.csproj", "{028F2D46-CD55-4835-A00A-7E3F3D113A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Integration.Tests", "MhorMail.Integration.Tests\MhorMail.Integration.Tests.csproj", "{BCA84CD1-D39D-4310-9499-453AEF79AC70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19C3D161-130D-4ADE-9D3C-AA19A3545E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C3D161-130D-4ADE-9D3C-AA19A3545E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C3D161-130D-4ADE-9D3C-AA19A3545E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C3D161-130D-4ADE-9D3C-AA19A3545E19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A55139A6-B1EE-4085-A163-F310241D701F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A55139A6-B1EE-4085-A163-F310241D701F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A55139A6-B1EE-4085-A163-F310241D701F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A55139A6-B1EE-4085-A163-F310241D701F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7101E40-CD6A-4EE7-820E-7971D7B245F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7101E40-CD6A-4EE7-820E-7971D7B245F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7101E40-CD6A-4EE7-820E-7971D7B245F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7101E40-CD6A-4EE7-820E-7971D7B245F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028F2D46-CD55-4835-A00A-7E3F3D113A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028F2D46-CD55-4835-A00A-7E3F3D113A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028F2D46-CD55-4835-A00A-7E3F3D113A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028F2D46-CD55-4835-A00A-7E3F3D113A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA84CD1-D39D-4310-9499-453AEF79AC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA84CD1-D39D-4310-9499-453AEF79AC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA84CD1-D39D-4310-9499-453AEF79AC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA84CD1-D39D-4310-9499-453AEF79AC70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
