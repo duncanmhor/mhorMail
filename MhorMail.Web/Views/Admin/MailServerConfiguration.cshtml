@@ -1,0 +1,17 @@
+﻿@model MhorMail.Model.ServerConfiguration
+
+@{
+    ViewBag.Title = "Mail Server Configuration";
+    Layout = "~/Views/Shared/_baselayout.cshtml";
+}
+
+<h2>Mail Server Configuration</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x=>x.ServerName)
+    @Html.TextBoxFor(x=>x.ServerName)
+    @Html.LabelFor(x=>x.ServerPort)
+    @Html.TextBoxFor(x=>x.ServerPort)
+    <button type="submit">Save</button>
+}

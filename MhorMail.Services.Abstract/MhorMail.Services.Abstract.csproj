@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAccountService.cs" />
+    <Compile Include="IAdminService.cs" />
     <Compile Include="IMailService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

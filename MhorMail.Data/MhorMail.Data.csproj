@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Conventions\BaseDataConvention.cs" />
     <Compile Include="MhorMailContext.cs" />
+    <Compile Include="MhorMailInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mappings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MhorMail.Model\MhorMail.Model.csproj">
+      <Project>{028F2D46-CD55-4835-A00A-7E3F3D113A8B}</Project>
+      <Name>MhorMail.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

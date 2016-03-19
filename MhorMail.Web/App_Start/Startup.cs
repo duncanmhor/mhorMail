@@ -1,9 +1,11 @@
-﻿using System.Reflection;
+﻿using System.Data.Entity;
+using System.Reflection;
 using System.Security.Claims;
 using System.Web.Helpers;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
+using MhorMail.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
@@ -21,10 +23,13 @@ namespace MhorMail.Web
             DependencyConfig.RegisterDependencies(builder);
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-            
-
             app.UseAutofacMiddleware(container);
             app.UseAutofacMvc();
+            Database.SetInitializer(new MhorMailInitializer());
+            using (var ctx = new MhorMailContext())
+            {
+                ctx.Database.Initialize(false);
+            }
         }
 
         private void ConfigureAuth(IAppBuilder app)

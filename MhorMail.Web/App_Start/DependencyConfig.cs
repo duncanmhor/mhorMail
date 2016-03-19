@@ -10,6 +10,7 @@ namespace MhorMail.Web
         {
             container.Register(c => new AccountService()).As<IAccountService>();
             container.Register(c => new MailService()).As<IMailService>();
+            container.Register(c => new AdminService()).As<IAdminService>();
         }
     }
 }
