@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Model", "MhorMail.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Integration.Tests", "MhorMail.Integration.Tests\MhorMail.Integration.Tests.csproj", "{BCA84CD1-D39D-4310-9499-453AEF79AC70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MhorMail.Data", "MhorMail.Data\MhorMail.Data.csproj", "{45D6CC43-E555-44EA-89D2-2C68C65A9004}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BCA84CD1-D39D-4310-9499-453AEF79AC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCA84CD1-D39D-4310-9499-453AEF79AC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCA84CD1-D39D-4310-9499-453AEF79AC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D6CC43-E555-44EA-89D2-2C68C65A9004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D6CC43-E555-44EA-89D2-2C68C65A9004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D6CC43-E555-44EA-89D2-2C68C65A9004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D6CC43-E555-44EA-89D2-2C68C65A9004}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

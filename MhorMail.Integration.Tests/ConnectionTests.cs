@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using MhorMail.Model;
 using MhorMail.Services;
 using MhorMail.Services.Abstract;
@@ -14,16 +9,23 @@ namespace MhorMail.Integration.Tests
     [TestFixture]
     public class ConnectionTests
     {
+        private readonly ServerConfiguration _serverDetails = new ServerConfiguration {ServerName = "mail.duncanlundie.co.uk",ServerPort = 143};
+        private readonly string _password;
+        public ConnectionTests()
+        {
+            _password = Environment.GetEnvironmentVariable("EmailPassword", EnvironmentVariableTarget.User);
+        }
+
         [Test]
         public void CanConnect()
         {
             IAccountService accountService = new AccountService();
             var result = accountService.CanConnectToIMAPAccount(new IMAPAccountSettings
             {
-                ServerName = "mail.duncanlundie.co.uk",
-                ServerPort = 143,
+                ServerDetails = _serverDetails,
+               
                 Username = "duncan@duncanlundie.co.uk",
-                Password = "J3st3r4#"
+                Password = _password
             });
 
             Assert.That(result.IsConnected,Is.True);
@@ -35,10 +37,9 @@ namespace MhorMail.Integration.Tests
             IAccountService accountService = new AccountService();
             var result = accountService.CanConnectToIMAPAccount(new IMAPAccountSettings
             {
-                ServerName = "mail.duncanlundie.co.uk",
-                ServerPort = 143,
+                ServerDetails = _serverDetails,
                 Username = "duncan@duncanlundie.co.uk",
-                Password = "J3st3r4#"
+                Password = _password
             });
 
             Assert.That(result.IsAuthenticated, Is.True);
@@ -50,10 +51,9 @@ namespace MhorMail.Integration.Tests
             IAccountService accountService = new AccountService();
             var result = accountService.CanConnectToIMAPAccount(new IMAPAccountSettings
             {
-                ServerName = "mail.duncanlundie.co.uk",
-                ServerPort = 143,
+                ServerDetails = _serverDetails,
                 Username = "duncan@duncanlundie.co.uk",
-                Password = "J3st3r4#"
+                Password = _password
             });
 
             Assert.That(result.IsConnected, Is.True);
@@ -67,10 +67,9 @@ namespace MhorMail.Integration.Tests
             IAccountService accountService = new AccountService();
             var result = accountService.CanConnectToIMAPAccount(new IMAPAccountSettings
             {
-                ServerName = "mail.duncanlundie.co.uk",
-                ServerPort = 143,
+                ServerDetails = _serverDetails,
                 Username = "duncan@duncanlundie.co.uk",
-                Password = "J3st3r4#"
+                Password = _password
             });
 
             Assert.That(result.IsConnected, Is.True);
@@ -85,8 +84,7 @@ namespace MhorMail.Integration.Tests
             IAccountService accountService = new AccountService();
             var result = accountService.CanConnectToIMAPAccount(new IMAPAccountSettings
             {
-                ServerName = "mail.duncanlundie.co.uk",
-                ServerPort = 143,
+                ServerDetails = _serverDetails,
                 Username = "duncan@duncanlundie.co.uk",
                 Password = "notMyPassword"
             });
@@ -102,10 +100,9 @@ namespace MhorMail.Integration.Tests
             IAccountService accountService = new AccountService();
             var result = accountService.CanConnectToIMAPAccount(new IMAPAccountSettings
             {
-                ServerName = "notmail.duncanlundie.co.uk",
-                ServerPort = 143,
+                ServerDetails = new ServerConfiguration() {ServerName = "oopsie.duncanlundie.co.uk",ServerPort = 143},
                 Username = "duncan@duncanlundie.co.uk",
-                Password = "J3st3r4#"
+                Password = _password
             });
 
             Assert.That(result.IsConnected, Is.False);

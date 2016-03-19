@@ -16,7 +16,7 @@ namespace MhorMail.Services
                 client.AuthenticationMechanisms.Remove("XOAUTH2");
                 try
                 {
-                    client.Connect(userImapAccountSettings.ServerName, userImapAccountSettings.ServerPort);
+                    client.Connect(userImapAccountSettings.ServerDetails.ServerName, userImapAccountSettings.ServerDetails.ServerPort);
                     result.IsConnected = client.IsConnected;
                     if(result.IsConnected)
                     {

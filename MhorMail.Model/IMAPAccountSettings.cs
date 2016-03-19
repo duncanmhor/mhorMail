@@ -8,8 +8,7 @@ namespace MhorMail.Model
 {
     public class IMAPAccountSettings
     {
-        public string ServerName { get; set; }
-        public int ServerPort { get; set; }
+       public ServerConfiguration ServerDetails { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
     }
